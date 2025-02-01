@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .navbar-brand {
+            color: black;
+            font-size: 28px;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .nav-link {
+            color: black;
+        }
+
+        .navbar-nav li a {
+            margin: 5px;
+            text-decoration: none;
+        }
+
+        .dropdown-item img {
+            width: 180px;
+            height: auto;
+            /*border: 1px solid white;*/
+        }
+
+        .nav-item.dropdown:hover .dropdown-menu {
+            flex: row;
+            visibility: visible;
+            opacity: 1;
+            margin: 0px;
+        }
+
+        .dropdown-menu {
+            display: none;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.2s, opacity 0.2s;
+        }
+
+        .nav-item.dropdown:hover .dropdown-menu {
+            display: flex;
+        }
+
+        /* Start of Women dropdown CSS */
+        .women-dropdown {
+            display: flex;
+            padding: 0%;
+        }
+
+        .dropdown-column {
+
+            list-style: none;
+        }
+
+        .dropdown-column h6 {
+            margin-top: 10px;
+            font-weight: bold;
+            padding: 5px;
+        }
+
+        .dropdown-column li {
+            list-style: none;
+
+        }
+
+        /* End of Women dropdown CSS */
+        .box {
+            border: 1px solid;
+            border-radius: 10px;
+            background-color: white;
+            float: left;
+            margin: 8px;
+        }
+
+        .container {
+            width: 22.4%;
+            height: 240px;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .header a {
+            color: rgb(39, 37, 37);
+            text-decoration: none;
+            font-family: sans-serif;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-size: small;
+        }
+
+        header1 a {
+            color: rgb(39, 37, 37);
+            text-decoration: none;
+        }
+
+        .button1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+
+        }
+
+        .discount {
+            border: 1px solid black;
+            border-radius: 20px;
+            background-color: white;
+            color: black;
+            font-size: small;
+            padding: 5px 10px;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 10px;
+            text-decoration: none;
+            cursor: pointer;
+
+        }
+
+        .discount:hover {
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-light  fixed-top" style="border-bottom: 1px solid black;">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand">edenrobe</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ">
+                    <!--<li class="nav-item"><a class="nav-link" href="#">Sale</a></li>-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="Sale.html" role="button" data-bs-toggle="" style="color: rgb(206, 21, 21);">Sale</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><img src="Men.jpg" alt=""></a></li>
+                            <li><a class="dropdown-item" href="#"><img src="Women.jpg" alt=""></a></li>
+                            <li><a class="dropdown-item" href="#"><img src="girls.jpg" alt=""></a></li>
+                            <li><a class="dropdown-item" href="#"><img src="boys.jpg" alt=""></a></li>
+                            <li><a class="dropdown-item" href="#"><img src="fragnance.jpg" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <!--<li class="nav-item"><a class="nav-link" href="#">Women</a></li>-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="Women.html" role="button" data-bs-toggle="">Women</a>
+                        <ul class="dropdown-menu women-dropdown">
+                            <li class="dropdown-column">
+                                <h6>Unstitched</h6>
+                                <ul style="font-size: medium;">
+                                    <li><a class="dropdown-item" href="#">Summer Collection</a></li>
+                                    <li><a class="dropdown-item" href="#">Allure Lawn</a></li>
+                                    <li><a class="dropdown-item" href="#">Allure Viscose</a></li>
+                                    <li><a class="dropdown-item" href="#">Allure Collection</a></li>
+                                    <li><a class="dropdown-item" href="#">Festive</a></li>
+                                    <li><a class="dropdown-item" href="#">Premium Unstitched</a></li>
+                                    <li><a class="dropdown-item" href="#">1 Piece</a></li>
+                                    <li><a class="dropdown-item" href="#">2 Piece</a></li>
+                                    <li><a class="dropdown-item" href="#">3 Piece</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-column">
+                                <h6>Ready to Wear</h6>
+                                <ul style="font-size: medium;">
+                                    <li><a class="dropdown-item" href="#">Summer Pret</a></li>
+                                    <li><a class="dropdown-item" href="#">Printed Pret</a></li>
+                                    <li><a class="dropdown-item" href="#">Solid Pret</a></li>
+                                    <li><a class="dropdown-item" href="#">Embroidered Pret</a></li>
+                                    <li><a class="dropdown-item" href="#">Festive Pret</a></li>
+                                    <li><a class="dropdown-item" href="#">Camisole</a></li>
+                                    <li><a class="dropdown-item" href="#">Rilli Pret</a></li>
+                                    <li><a class="dropdown-item" href="#">Season's Basics</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-column">
+                                <h6>Bottoms</h6>
+                                <ul style="font-size: medium;">
+                                    <li><a class="dropdown-item" href="#">Trousers</a></li>
+                                    <li><a class="dropdown-item" href="#">Basic Tights</a></li>
+                                    <li><a class="dropdown-item" href="#">Shalwar</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-column">
+                                <ul>
+                                    <li><a class="dropdown-item" href="#"><img src="wo.png" alt=""></a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <!--li class="nav-item"><a class="nav-link" href="./edenrobeDemo.html">Men</a></li-->
+                    <li class="nav-item dropdown">
+                        <a href="Men.html" class="nav-link dropdown-toggle" role="button"
+                            data-bs-toggle="">Men</a>
+                        <ul class="dropdown-menu men-dropdown">
+                            <li class="dropdown-column">
+                                <h6>ETHNIC WEAR</h6>
+                                <ul>
+                                    <li><a class="dropdown-item" href="#">Warsaat-festive
+                                            Collection</a></li>
+                                    <li><a class="dropdown-item" href="#">Kurtas</a></li>
+                                    <li><a class="dropdown-item" href="#">Kameez Shalwar</a></li>
+                                    <li><a class="dropdown-item" href="#">Unstitched</a></li>
+                                    <li><a class="dropdown-item" href="#">Kurta Pajama</a></li>
+                                    <li><a class="dropdown-item" href="#">PWaiscoats</a></li>
+                                    <li><a class="dropdown-item" href="#">Shalwar & Pajama</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-column">
+                                <h6>CEREMONIAL</h6>
+                                <ul>
+                                    <li><a class="dropdown-item" href="#">Sherwanis</a></li>
+                                    <li><a class="dropdown-item" href="#">Coat & Blazer</a></li>
+                                    <li><a class="dropdown-item" href="#">Coat Pants</a></li>
+                                    <li><a class="dropdown-item" href="#">Prince Coat & Suits</a></li>
+                                    <li><a class="dropdown-item" href="#">Westren Waiscoat</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-column">
+                                <h6>WESTREN WEAR</h6>
+                                <ul>
+                                    <li><a class="dropdown-item" href="#">Polo Shirts</a></li>
+                                    <li><a class="dropdown-item" href="#">Graphic Tees</a></li>
+                                    <li><a class="dropdown-item" href="#">Shirts</a></li>
+                                    <li><a class="dropdown-item" href="#">Ties</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-column">
+                                <h6>SHIRTS</h6>
+                                <ul>
+                                    <li><a class="dropdown-item" href="#">Business Casual</a></li>
+                                    <li><a class="dropdown-item" href="#">Solids</a></li>
+                                    <li><a class="dropdown-item" href="#">Urban Culture</a></li>
+                                    <li><a class="dropdown-item" href="#">Icon</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-column">
+                                <h6>BOTTOMS</h6>
+                                <ul>
+                                    <li><a class="dropdown-item" href="#">Formal Pants</a></li>
+                                    <li><a class="dropdown-item" href="#">Chinos</a></li>
+                                    <li><a class="dropdown-item" href="#">Jeans</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-column">
+                                <ul>
+                                    <li><a class="dropdown-item" href="#"><img src="mo.png" alt=""></a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <!--li class="nav-item"><a class="nav-link" href="#">Boys</a></li-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="boys.html" role="button" data-bs-toggle="">Boys</a>
+                        <ul class="dropdown-menu boys-dropdown">
+                            <li class="dropdown-column">
+                                <h6>ETHNIC WEAR</h6>
+                                <ul>
+                                    <li><a class="dropdown-item" href="#">Kurtas</a></li>
+                                    <li><a class="dropdown-item" href="#">Kameez Shalwar</a></li>
+                                    <li><a class="dropdown-item" href="#">Kurta Pajama</a></li>
+                                    <li><a class="dropdown-item" href="#">Waiscoats Suits</a></li>
+                                    <li><a class="dropdown-item" href="#">Shalwar & Pajama</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-column">
+                                <h6>CEREMONIAL</h6>
+                                <ul>
+                                    <li><a class="dropdown-item" href="#">Sherwanis</a></li>
+                                    <li><a class="dropdown-item" href="#">Blazers</a></li>
+                                    <li><a class="dropdown-item" href="#">Coat Pants</a></li>
+                                    <li><a class="dropdown-item" href="#">Prince Coat </a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-column">
+                                <h6>WESTREN WEAR</h6>
+                                <ul>
+                                    <li><a class="dropdown-item" href="#">Shirts</a></li>
+                                    <li><a class="dropdown-item" href="#">Graphic Tees</a></li>
+                                    <li><a class="dropdown-item" href="#">Polo Shirts</a></li>
+                                    <li><a class="dropdown-item" href="#">Basic Tees</a></li>
+                                    <li><a class="dropdown-item" href="#">Tank Tops</a></li>
+                                    <li><a class="dropdown-item" href="#">Co-ord Sets</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-column">
+                                <h6>BOTTOMS</h6>
+                                <ul>
+                                    <li><a class="dropdown-item" href="#">Shorts</a></li>
+                                    <li><a class="dropdown-item" href="#">Denim Jeans</a></li>
+                                    <li><a class="dropdown-item" href="#">Chino Pants</a></li>
+                                    <li><a class="dropdown-item" href="#">Trousers</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-column">
+                                <ul>
+                                    <li><a class="dropdown-item" href="#"><img src="Bo.png" alt=""></a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <!--li class="nav-item"><a class="nav-link" href="#">Girls</a></li-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="Girls.html" role="button" data-bs-toggle="">Girls</a>
+                        <ul class="dropdown-menu girls-dropdown">
+                            <li class="dropdown-column">
+                                <h6>WESTERN WEAR</h6>
+                                <ul>
+                                    <li><a class="dropdown-item" href="#">Tees & Western Tops</a></li>
+                                    <li><a class="dropdown-item" href="#">Dungarees</a></li>
+                                    <li><a class="dropdown-item" href="#">Polo Shirts</a></li>
+                                    <li><a class="dropdown-item" href="#">Frocks</a></li>
+                                    <li><a class="dropdown-item" href="#">Fusion Top</a></li>
+                                    <li><a class="dropdown-item" href="#">Co-Ord Sets</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-column">
+                                <h6>ETHNIC WEAR</h6>
+                                <ul>
+                                    <li><a class="dropdown-item" href="#">Pret</a></li>
+                                    <li><a class="dropdown-item" href="#">Formals</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-column">
+                                <h6>BOTTOMS</h6>
+                                <ul>
+                                    <li><a class="dropdown-item" href="#">Trousers</a></li>
+                                    <li><a class="dropdown-item" href="#">Jeans</a></li>
+                                    <li><a class="dropdown-item" href="#">Shorts</a></li>
+                                    <li><a class="dropdown-item" href="#">Tights & Leggings</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-column">
+                                <ul>
+                                    <li><a class="dropdown-item" href="#"><img src="Go.png" alt=""></a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <!--li class="nav-item"><a class="nav-link" href="#">Fragnance</a></li-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="Fragnance.html" role="button"
+                            data-bs-toggle="">Fragnance</a>
+                        <ul class="dropdown-menu frangnance-dropdown">
+                            <li class="dropdown-column">
+                                <h6>MEN</h6>
+                                <ul>
+                                    <li><a class="dropdown-item" href="#">Perfumes</a></li>
+                                    <li><a class="dropdown-item" href="#">Deotorants</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-column">
+                                <h6>WOMEN</h6>
+                                <ul>
+                                    <li><a class="dropdown-item" href="#">Perfumes</a></li>
+                                    <li><a class="dropdown-item" href="#">Body Mists</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-column">
+                                <ul>
+                                    <li><a class="dropdown-item" href="#"><img src="Foo.png" alt=""></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Monochrome.html">Monochrome</a></li>
+                    <li class="nav-item"><a class="nav-link" href="New Arrivals.html">New Arrivals</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br><br><br>
+    <div class="container">
+        <div class="box1">
+            <a href="#"><img src="tank.png" width="155px" height="155px" style="border-radius: 100%;padding: 7px;"></a><br>
+            <div class="header">
+                <a href="#">Boys Tank Tops</a>
+            </div>
+        </div>
+        <div class="box2">
+            <a href="#"><img src="polo.png" width="155px" height="155px" style="border-radius: 100%;padding: 7px;"></a><br>
+            <div class="header">
+                <a href="#">Boys polo Shirts</a>
+            </div>
+        </div>
+        <div class="box3">
+            <a href="#"><img src="Boysss.png" width="155px" height="155px" style="border-radius: 100%;padding: 7px;"></a><br>
+            <div class="header">
+                <a href="#">Boys Kurta Shalwar</a>
+            </div>
+        </div>
+        <div class="box4">
+            <a href="#"><img src="Tees.png" width="155px" height="155px" style="border-radius: 100%;padding: 7px;"></a><br>
+            <div class="header">
+                <a href="#">Boys Tees</a>
+            </div>
+        </div>
+        <div class="box5">
+            <a href="#"><img src="b16.png" width="155px" height="155px" style="border-radius: 100%;padding: 7px;"></a><br>
+            <div class="header">
+                <a href="#">Boys Ethnic Wear</a>
+            </div>
+        </div>
+        <div class="box6">
+            <a href="#"><img src="Women5.png" width="155px" height="155px" style="border-radius: 100%;padding: 7px;"></a><br>
+            <div class="header">
+                <a href="#">Sale</a>
+            </div>
+        </div>
+    </div>
+    <div class="  button1">
+        <a href="#" class="discount">20% off</a>
+        <a href="#" class="discount">25% off</a>
+        <a href="#" class="discount">40% off</a>
+        <a href="#" class="discount">Above 50% off</a>
+        <a href="#" class="discount">Flat 50% off</a>
+        <a href="#" class="discount">Upto 50% off</a>
+        <a href="#" class="discount">70% off</a>
+    </div>
+    <!--p style="padding: 15px;text-decoration: none; color: black;"><a href="#">Home</a> / <a href="#">Men</a></p-->
+    <div class="header1">
+        <p style="padding: 15px;"><a href="index.html" style="text-decoration: none;color: black; ">Home</a> / Boys</p>
+    </div>
+    <h5 style="padding: 15px;">BOYS</h5>
+
+    <div class="container-fluid">
+        <div class="box">
+            <div class="image-container">
+                <img src="b1.png" width="280px" height="380px" style="border-radius: 10px;" alt="Teddy Bear">
+            </div>
+            <div pt-5 style="display: flex;align-items: center;justify-content: center;padding-top: 2px; "><a href="#"
+                    style="text-decoration: none;color: black; ">Order Now</a> </div>
+
+        </div>
+
+        <div class="box">
+            <img src="b2.png" width="280px" height="380px" style="border-radius: 10px;" alt="Teddy Bear">
+            <div pt-5 style="display: flex;align-items: center;justify-content: center;padding-top: 2px; "><a href="#"
+                    style="text-decoration: none;color: black; ">Order Now</a> </div>
+        </div>
+        <div class="box">
+            <img src="b3.png" width="280px" height="380px" style="border-radius: 10px;" alt="Teddy Bear">
+            <div pt-5 style="display: flex;align-items: center;justify-content: center;padding-top: 2px; "><a href="#"
+                    style="text-decoration: none;color: black; ">Order Now</a> </div>
+        </div>
+        <div class="box">
+            <img src="b4.png" width="280px" height="380px" style="border-radius: 10px;" alt="Teddy Bear">
+            <div pt-5 style="display: flex;align-items: center;justify-content: center;padding-top: 2px; "><a href="#"
+                    style="text-decoration: none;color: black; ">Order Now</a> </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="box">
+            <img src="b5.png" width="280px" height="380px" style="border-radius: 10px;" alt="Teddy Bear">
+            <div pt-5 style="display: flex;align-items: center;justify-content: center;padding-top: 2px; "><a href="#"
+                    style="text-decoration: none;color: black; ">Order Now</a> </div>
+        </div>
+        <div class="box">
+            <img src="b6.png" width="280px" height="380px" style="border-radius: 10px;" alt="Teddy Bear">
+            <div pt-5 style="display: flex;align-items: center;justify-content: center;padding-top: 2px; "><a href="#"
+                    style="text-decoration: none;color: black; ">Order Now</a> </div>
+        </div>
+        <div class="box">
+            <img src="b7.png" width="280px" height="380px" style="border-radius: 10px;" alt="Teddy Bear">
+            <div pt-5 style="display: flex;align-items: center;justify-content: center;padding-top: 2px; "><a href="#"
+                    style="text-decoration: none;color: black; ">Order Now</a> </div>
+        </div>
+        <div class="box">
+            <img src="b8.png" width="280px" height="380px" style="border-radius: 10px;" alt="Teddy Bear">
+            <div pt-5 style="display: flex;align-items: center;justify-content: center;padding-top: 2px; "><a href="#"
+                    style="text-decoration: none;color: black; ">Order Now</a> </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="box">
+            <div class="image-container">
+                <img src="b9.png" width="280px" height="380px" style="border-radius: 10px;" alt="Teddy Bear">
+            </div>
+            <div pt-5 style="display: flex;align-items: center;justify-content: center;padding-top: 2px; "><a href="#"
+                    style="text-decoration: none;color: black; ">Order Now</a> </div>
+
+        </div>
+
+        <div class="box">
+            <img src="b10.png" width="280px" height="380px" style="border-radius: 10px;" alt="Teddy Bear">
+            <div pt-5 style="display: flex;align-items: center;justify-content: center;padding-top: 2px; "><a href="#"
+                    style="text-decoration: none;color: black; ">Order Now</a> </div>
+        </div>
+        <div class="box">
+            <img src="b11.png" width="280px" height="380px" style="border-radius: 10px;" alt="Teddy Bear">
+            <div pt-5 style="display: flex;align-items: center;justify-content: center;padding-top: 2px; "><a href="#"
+                    style="text-decoration: none;color: black; ">Order Now</a> </div>
+        </div>
+        <div class="box">
+            <img src="b12.png" width="280px" height="380px" style="border-radius: 10px;" alt="Teddy Bear">
+            <div pt-5 style="display: flex;align-items: center;justify-content: center;padding-top: 2px; "><a href="#"
+                    style="text-decoration: none;color: black; ">Order Now</a> </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="box">
+            <div class="image-container">
+                <img src="b13.png" width="280px" height="380px" style="border-radius: 10px;" alt="Teddy Bear">
+            </div>
+            <div pt-5 style="display: flex;align-items: center;justify-content: center;padding-top: 2px; "><a href="#"
+                    style="text-decoration: none;color: black; ">Order Now</a> </div>
+
+        </div>
+
+        <div class="box">
+            <img src="b14.png" width="280px" height="380px" style="border-radius: 10px;" alt="Teddy Bear">
+            <div pt-5 style="display: flex;align-items: center;justify-content: center;padding-top: 2px; "><a href="#"
+                    style="text-decoration: none;color: black; ">Order Now</a> </div>
+        </div>
+        <div class="box">
+            <img src="b15.png" width="280px" height="380px" style="border-radius: 10px;" alt="Teddy Bear">
+            <div pt-5 style="display: flex;align-items: center;justify-content: center;padding-top: 2px; "><a href="#"
+                    style="text-decoration: none;color: black; ">Order Now</a> </div>
+        </div>
+        <div class="box">
+            <img src="b16.png" width="280px" height="380px" style="border-radius: 10px;" alt="Teddy Bear">
+            <div pt-5 style="display: flex;align-items: center;justify-content: center;padding-top: 2px; "><a href="#"
+                    style="text-decoration: none;color: black; ">Order Now</a> </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="box">
+            <div class="image-container">
+                <img src="b17.png" width="280px" height="380px" style="border-radius: 10px;" alt="Teddy Bear">
+            </div>
+            <div pt-5 style="display: flex;align-items: center;justify-content: center;padding-top: 2px; "><a href="#"
+                    style="text-decoration: none;color: black; ">Order Now</a> </div>
+        </div>
+        <div class="box">
+            <img src="b18.png" width="280px" height="380px" style="border-radius: 10px;" alt="Teddy Bear">
+            <div pt-5 style="display: flex;align-items: center;justify-content: center;padding-top: 2px; "><a href="#"
+                    style="text-decoration: none;color: black; ">Order Now</a> </div>
+        </div>
+        <div class="box">
+            <img src="b19.png" width="280px" height="380px" style="border-radius: 10px;" alt="Teddy Bear">
+            <div pt-5 style="display: flex;align-items: center;justify-content: center;padding-top: 2px; "><a href="#"
+                    style="text-decoration: none;color: black; ">Order Now</a> </div>
+        </div>
+        <div class="box">
+            <img src="b20.png" width="280px" height="380px" style="border-radius: 10px;" alt="Teddy Bear">
+            <div pt-5 style="display: flex;align-items: center;justify-content: center;padding-top: 2px; "><a href="#"
+                    style="text-decoration: none;color: black; ">Order Now</a> </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="box">
+            <div class="image-container">
+                <img src="b21.png" width="280px" height="380px" style="border-radius: 10px;" alt="Teddy Bear">
+            </div>
+            <div pt-5 style="display: flex;align-items: center;justify-content: center;padding-top: 2px; "><a href="#"
+                    style="text-decoration: none;color: black; ">Order Now</a> </div>
+        </div>
+        <div class="box">
+            <img src="b22.png" width="280px" height="380px" style="border-radius: 10px;" alt="Teddy Bear">
+            <div pt-5 style="display: flex;align-items: center;justify-content: center;padding-top: 2px; "><a href="#"
+                    style="text-decoration: none;color: black; ">Order Now</a> </div>
+        </div>
+        <div class="box">
+            <img src="b23.png" width="280px" height="380px" style="border-radius: 10px;" alt="Teddy Bear">
+            <div pt-5 style="display: flex;align-items: center;justify-content: center;padding-top: 2px; "><a href="#"
+                    style="text-decoration: none;color: black; ">Order Now</a> </div>
+        </div>
+        <div class="box">
+            <img src="b24.png" width="280px" height="380px" style="border-radius: 10px;" alt="Teddy Bear">
+            <div pt-5 style="display: flex;align-items: center;justify-content: center;padding-top: 2px; "><a href="#"
+                    style="text-decoration: none;color: black; ">Order Now</a> </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
